@@ -7,10 +7,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-img.icon{
-    width: 1.5em;
-    height: 1.5em;
-}
+
 :root{
     --clz: #222327;
 }
