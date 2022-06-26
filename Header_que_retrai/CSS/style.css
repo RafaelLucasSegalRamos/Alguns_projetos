@@ -109,5 +109,8 @@ main p{
     header.sticky a.logo{
         left: 40px;
     }
-    
+    header.sticky img.banner{
+        opacity: 0;
+        color: lightgrey;
+    }
 }
