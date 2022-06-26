@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Responsive FullScreen Animated Sticky header</title>
+</head>
+<body>
+    <header>
+        <img src="wallpaper004.jpg" alt="" class="banner">
+        <a href="#" class="logo">Brand.</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>FullScreen Sticky Header</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam id, ad rem esse aspernatur incidunt! Praesentium, qui necessitatibus vel dicta sequi sunt culpa cumque cupiditate recusandae delectus excepturi placeat ratione. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit inventore repellat quo. Quae facere eligendi qui asperiores. Nesciunt ipsa sequi accusantium enim facere, delectus est nulla odio ipsum omnis quisquam. <br><br></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt fugiat facilis amet illum sit pariatur? Minus, voluptate tempore, commodi eum, adipisci porro optio id voluptatem accusamus facere placeat cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem culpa velit deserunt, iusto asperiores libero. Aut, dignissimos corporis? Maiores odio ratione fuga modi tenetur deserunt iste quasi id non fugiat! <br><br></p>
+    </main>
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+
+        });
+    </script>
+</body>
+</html>
