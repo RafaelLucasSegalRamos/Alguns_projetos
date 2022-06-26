@@ -18,7 +18,7 @@ header{
     width: 100%;
     height: 100vh;
     padding: 0 100px;
-    background-color: rgb(255, 255, 255);
+    background-color: lightgray;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -111,6 +111,53 @@ main p{
     }
     header.sticky img.banner{
         opacity: 0;
-        color: lightgrey;
+    }
+    nav ul{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    header.sticky .toggle{
+        position: fixed;
+        top: 15px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        background-color: white;
+        background-image: url(menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .toggle.active{
+        background-image: url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    nav.active ul{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 80px);
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    header.sticky nav ul{
+        visibility: visible;
+        opacity: 1;
+    }
+    nav.active ul li a{
+        color: white;
+        font-size: 2em;
+    }
+    nav.active ul li a:hover{
+        color: rgb(0, 173, 173);
     }
 }

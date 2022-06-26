@@ -11,6 +11,7 @@
     <header>
         <img src="wallpaper004.jpg" alt="" class="banner">
         <a href="#" class="logo">Brand.</a>
+        <div class="toggle"></div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -34,6 +35,11 @@
             header.classList.toggle('sticky', window.scrollY > 0);
 
         });
+        const navi =  document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navi.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
