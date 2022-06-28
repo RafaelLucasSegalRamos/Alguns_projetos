@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root{
+    --cinza: #333;
+    --azulclaro: #00bcd4;
+}
 *{
     padding: 0;
     margin: 0;
@@ -20,7 +24,7 @@
     background-position: center;
     background-size: 30px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 1000;
 }
 .toggle.active{
     background-image: url(images/close.png);
@@ -55,7 +59,8 @@ section.banner{
     object-fit: cover;
 }
 
-.banner .contentBx{
+.banner .contentBx, .sidebar
+    {
     position: absolute;
     top: 0;
     right: 0;
@@ -73,8 +78,92 @@ section.banner{
     font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background-color: #333;
+    background-color: var(--cinza);
     color: white;
     padding: 5px;
 }
 
+.banner .contentBx h4{
+    font-size: 1.5em;
+    color: var(--cinza);
+    font-weight: 300;
+}
+.banner .contentBx h4 span{
+    color: var(--azulclaro);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner .contentBx h2{
+    font-size: 3em;
+    color: var(--cinza);
+    line-height: 1em;
+}
+p{
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 300;
+}
+a.btn{
+    background: var(--azulclaro);
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.sidebar{
+    position: fixed;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    padding: 40px;
+    z-index: 100;
+    right: -100%;
+}
+.sidebar.active{
+    right: 0;
+}
+.sidebar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sidebar ul li
+{
+    list-style: none;
+
+}
+.sidebar ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 10px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.sidebar ul li a:hover
+{
+    color: var(--azulclaro);
+}
+.sci
+{
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sci li{
+    list-style: none;
+    margin-right: 10px;
+}
+.sci li img{
+    transform: scale(0.5);
+}

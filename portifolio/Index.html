@@ -23,13 +23,31 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non praesentium repudiandae laborum perferendis itaque et veritatis pariatur sit sunt, repellat dolore quo sint illo ex vel mollitia reprehenderit totam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero consectetur accusamus sed laboriosam dolor impedit natus dolorum est ipsam praesentium eius aliquam, ad dolore provident expedita voluptatem. At, corporis.</p>
                 <a href="#" class="btn">About Me</a>
             </div>
+            <ul class="sci">
+                <li><a href="#"><img src="CSS/images/facebook.png" alt="Img Do facebook"></a></li>
+                <li><a href="#"><img src="CSS/images/twitter.png" alt="Img Do Twiter"></a></li>
+                <li><a href="#"><img src="CSS/images/instagram.png" alt="Img Do Instagram"></a></li>
+            </ul>
         </div>
     </section>
      
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
     <script>
         function toggleMenu(){
             const menuToggle = document.querySelector('.toggle');
+            const sidebar = document.querySelector('.sidebar');
+
             menuToggle.classList.toggle('active');
+            sidebar.classList.toggle('active');
+
         }
     </script>
 </body>
