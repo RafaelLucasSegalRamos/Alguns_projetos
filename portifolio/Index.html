@@ -5,9 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Portifolio</title>
+    <title>Personal Portifolio - Responsive Website Design</title>
 </head>
 <body>
+    <div class="toggle" onclick="toggleMenu();"></div>
     
+    <section class="banner" id="home">
+        <div class="imgSideBar">
+            <img src="CSS/images/bg.jpg" alt="Backgroud">
+        </div>
+        <div class="contentBx">
+            <h5 class="logoText">My_Portfolio</h5>
+            <div>
+                <h4><span>Hello</span> I'm</h4>
+                <h2>Rafael Lucas</h2>
+                <h4>I'm a student from Armando Bayeux, and I studying system developing.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non praesentium repudiandae laborum perferendis itaque et veritatis pariatur sit sunt, repellat dolore quo sint illo ex vel mollitia reprehenderit totam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit libero consectetur accusamus sed laboriosam dolor impedit natus dolorum est ipsam praesentium eius aliquam, ad dolore provident expedita voluptatem. At, corporis.</p>
+                <a href="#" class="btn">About Me</a>
+            </div>
+        </div>
+    </section>
+     
+    <script>
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
