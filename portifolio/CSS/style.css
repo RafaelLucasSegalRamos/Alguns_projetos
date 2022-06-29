@@ -212,8 +212,31 @@ a.btn{
 {
     background: white;
 }
-
 .about
 {
     background: black;
+}
+.about .content
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.about .content .textBx
+{
+    min-width: 49%;
+    width: 49%;
+}
+.about .content .textBx p
+{
+    color: white;
+}
+.about .content .imgbx
+{
+    margin-left: 40px;
+}
+.about .content .imgbx img
+{
+    max-width: 100%;
+    
 }
