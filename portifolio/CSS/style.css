@@ -409,3 +409,64 @@ a.btn{
     cursor: pointer;
     max-width: 150px;
 }
+.copyright
+{
+    color: white;
+    background: #111;
+    text-align: center;
+    padding: 10px;
+}
+.copyright p{
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 991px)
+{
+    .banner .imgSideBar 
+    {
+        display: none;
+    }
+    .banner .contentBx,
+    .sidebar
+    {
+        width: 100%;
+        padding: 40px;
+    }
+    .logoText 
+    {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+    .toggle {
+        right: 40px;
+    }
+    .sci
+    {
+        left: 40px;
+    }
+    section{
+        padding: 40px;
+    }
+    .about .content{
+        flex-direction: column;
+        display: flex;
+        margin-top: 0;
+    }
+    .about .content .textBx
+    {
+        min-width: 100%;
+        width: 100%;
+        text-align: justify;
+    }
+    .about .content .imgBx
+    {
+        margin-left: 0;
+    }
+    .services .content .servicesBx
+    {
+        
+    }
+
+}
