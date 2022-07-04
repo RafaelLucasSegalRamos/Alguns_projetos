@@ -466,7 +466,39 @@ a.btn{
     }
     .services .content .servicesBx
     {
-        
+       padding: 30px 20px;
+       max-width: 340px;
+       margin: 10px; 
+    }
+    .contact .contactForm 
+    {
+        width: 100%;
+    }
+    .contactForm .row
+    {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact .contactForm .row .col50
+    {
+        width: 100%;
+    }
+    .sidebar ul li a 
+    {
+        font-size: 1.5em;
+        padding: 10px;
     }
 
+}
+
+@media (max-width: 500px)
+{
+    .services .content .servicesBx,
+    .work .content .workBx
+    {
+                 max-width: 100%;
+         width: 100%;
+         margin: 10px 0;
+    }
 }
