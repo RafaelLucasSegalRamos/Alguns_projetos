@@ -79,7 +79,7 @@ body
 
 .container a:hover:before
 {
-    transform: translateY(-49%);
+    transform: translateY(-50%);
     width: 60%;
     height: 100%;
     left: -2px;
