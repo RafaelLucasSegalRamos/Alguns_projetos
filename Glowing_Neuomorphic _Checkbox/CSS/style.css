@@ -8,3 +8,79 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ebf5fc;
+}
+
+ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    padding: 20px;
+    width: 240px;
+    background: #ebf5fc;
+    box-shadow: -2px -2px 5px white,
+                3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li
+{
+    list-style: none;
+    position: relative;
+    text-align: center;
+    margin: 15px;
+}
+
+ul li label
+{   
+    position: relative;
+}
+
+ul li label input[type="checkbox"]
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+ul li label .icon-box
+{
+    width: 60px;
+    height: 60px;
+    background: #ebf5fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 5px white,
+                3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+ul li label .icon-box .fa-brands,
+ul li label .icon-box .fa-solid
+{
+    font-size: 30px;
+    color: #6a9bd8;
+}
+
+ul li label input[type="checkbox"]:checked ~ .icon-box
+{
+    box-shadow: inset -2px -2px 5px white,
+                inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li label input[type="checkbox"]:checked ~ .icon-box .fa-brands,
+ul li label input[type="checkbox"]:checked ~ .icon-box .fa-solid
+{
+    transform: scale(0.95);
+}
