@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f2f2f2;
+    overflow: hidden;
+}
+
+.container
+{
+    position: relative;
+    max-width: 600px;
+    height: 500px;
+    padding: 50px;
+    color: #555;
+}
+
+.container .content
+{
+    display: none;
+    margin-top: 20px;
+}
+
+.container .content.contentEnglish
+{
+    display: block;
+}
+
+.check
+{
+    position: relative;
+    width: 50px;
+}
+
+.check::before
+{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+.check::after
+{
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+.check:checked:after
+{
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+
+.check:checked ~ .content.contentEnglish
+{
+    display: none;
+}
+
+.check:checked ~ .content.contentPortuguese
+{
+    display: block;
+}
+
+.check:checked::before
+{
+    background: #00a1ff;
+}
+
+.en
+{
+    color: #333;
+}
+
+.pt
+{
+    color: #00a1ff;
+}
