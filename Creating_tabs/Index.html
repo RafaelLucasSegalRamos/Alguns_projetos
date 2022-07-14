@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style1.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>Creating tabs</title>
 </head>
 <body>
     <div class="container">
         <div class="icon">
-            <div class="iconBx">
+            <div class="iconBx active" data-id="content1">
                 <img src="CSS/imgs/img1.png">
             </div>
-            <div class="iconBx">
-                <img src="CSS/imgs/img2.png">
+            <div class="iconBx" data-id="content2">
+                <img src="CSS/imgs/img2.png" >
             </div>
-            <div class="iconBx">
+            <div class="iconBx" data-id="content3">
                 <img src="CSS/imgs/img3.png">
             </div>
-            <div class="iconBx">
+            <div class="iconBx" data-id="content4">
                 <img src="CSS/imgs/img4.jpg">
             </div>
         </div>
         <div class="content">
-            <div class="contentBx">
+            <div class="contentBx active" id="content1">
                 <div>
                     <div class="text">
                         <h2>Google Text</h2>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contentBx">
+            <div class="contentBx" id="content2">
                 <div>
                     <div class="text">
                         <h2>Facebook Text</h2>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contentBx">
+            <div class="contentBx" id="content3">
                 <div>
                     <div class="text">
                         <h2>Twitter Text</h2>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contentBx">
+            <div class="contentBx" id="content4">
                 <div>
                     <div class="text">
                         <h2>Yahoo! Text</h2>
@@ -58,5 +58,23 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        var iconBx = document.querySelectorAll('.iconBx')
+        var contentBx = document.querySelectorAll('.contentBx')
+    
+        for (var i=0; i<iconBx.length; i++){
+            iconBx[i].addEventListener('mouseover', function(){
+                for (var i=0; i<contentBx.length; i++){
+                    contentBx[i].className='contentBx';
+                }
+                document.getElementById(this.dataset.id).className = 'contentBx active';
+                for (var i=0; i<iconBx.length; i++){
+                    iconBx[i].className='iconBx';
+                }
+                this.className = 'iconBx active'
+            })
+        }
+    </script>
 </body>
 </html>
