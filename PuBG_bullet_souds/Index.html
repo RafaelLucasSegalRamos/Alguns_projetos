@@ -8,17 +8,18 @@
     <title>PUBG | Vannila JavaScript</title>
 </head>
 <body>
-    <section></section>
+    <section>
+    </section>
 
     <script type="text/javascript">
         document.addEventListener("click", function(e){
-            var body = documet.querySelector("body");
-            var bullet = document.createElement("span");
+            var body = documet.querySelector('body');
+            var bullet = document.createElement('a');
             var x = e.offsetX;
             var y = e.offsetY;
             
-            bullet.style.left = x+"px";
-            bullet.style.top = y+"px";
+            bullet.style.right = x+"px";
+            bullet.style.bottom = y+"px";
             body.appendChild(bullet);
         });
 
