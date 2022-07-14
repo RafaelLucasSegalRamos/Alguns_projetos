@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>PUBG | Vannila JavaScript</title>
+</head>
+<body>
+    <section></section>
+
+    <script type="text/javascript">
+        document.addEventListener("click", function(e){
+            var body = documet.querySelector("body");
+            var bullet = document.createElement("span");
+            var x = e.offsetX;
+            var y = e.offsetY;
+            
+            bullet.style.left = x+"px";
+            bullet.style.top = y+"px";
+            body.appendChild(bullet);
+        });
+
+    </script>
+</body>
+</html>
