@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    min-height: 200vh;
+}
+
+section
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+section .side
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(imgs/wallpaper004.jpg);
+}
+
+section .side#side1
+{
+    clip-path: polygon(0 0, 49% 0%, 31% 11%, 63% 22%, 35% 35%, 64% 43%, 32% 58%, 58% 63%, 35% 72%, 59% 80%, 35% 90%, 59% 100%, 0 100%);
+}
+
+section .side#side2
+{
+    clip-path: polygon(100% 0, 49% 0%, 31% 11%, 63% 22%, 35% 35%, 64% 43%, 32% 58%, 58% 63%, 35% 72%, 59% 80%, 35% 90%, 59% 100%, 100% 100%);
+}
+.contentBx
+{
+    background: black;
+    color: white;
+    padding: 20px;
+    padding-top: 150vh;
+}
+
+.contentBx h2
+{
+    position: relative;
+    font-size: 4em;
+}
+.contentBx p
+{
+    text-align: justify;
+    font-size: 1.2em;
+}
