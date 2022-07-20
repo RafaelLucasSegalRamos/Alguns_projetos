@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Dark mode CSS JavaScript</title>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#"><img src="CSS/imgs/logo.png" alt="Logo do StarBucks" class="logo"></a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <div class="linha"></div>
+                <li><a href="#">Menu</a></li>
+                <div class="linha"></div>
+                <li><a href="#">What's New</a></li>
+                <div class="linha"></div>
+                <li><a href="#">Contact</a></li>
+                <li><span class="themeSwitch"></span></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a Coffee <br>It's <span>StarBucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis exercitationem obcaecati similique eos possimus vitae fuga repellat, modi enim suscipit quidem ullam, beatae voluptatum laudantium ipsam! Animi recusandae repellat id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, totam. Autem ipsam obcaecati dolorum natus, dicta ratione? Assumenda pariatur, eum ullam est officiis delectus mollitia quisquam vero iusto, quae sapiente? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="CSS/imgs/milkshake.png" alt="Imagem de milkshake">
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </section>
+
+    <script src="https://kit.fontawesome.com/e426d8b25c.js" crossorigin="anonymous"></script>
+    <script>
+        let themeSwitch = document.querySelector('.themeSwitch');
+        let body = document.querySelector('body');
+        themeSwitch.onclick = function(){
+            themeSwitch.classList.toggle('active');
+            body.classList.toggle('dark');
+        }
+
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
