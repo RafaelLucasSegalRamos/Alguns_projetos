@@ -82,4 +82,9 @@ body
         justify-content: center;
         align-items: center;
     }
+
+    .container .card .content
+    {
+        margin-left: 0px;
+    }
 }
