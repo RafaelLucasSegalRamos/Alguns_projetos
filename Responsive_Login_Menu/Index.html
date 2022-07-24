@@ -18,8 +18,12 @@
                         <input type="text" placeholder="Username">
                         <input type="password" placeholder="Password">
                         <input type="submit" value="Login">
-                        <p class="singup">Don't have an account? <a href="#">Sing Up.</a></p>
+                        <p class="singup">Don't have an account? <a href="#" onclick="toggleForm();">Sing Up.</a></p>
+                        <div class="toggle">
+                            <i class="indicator"></i>
+                        </div>
                     </form>
+                    
                 </div>
             </div>
             <div class="user singupBx">
@@ -31,12 +35,27 @@
                         <input type="password" placeholder="Creat Password">
                         <input type="password" placeholder="Confirm Password">
                         <input type="submit" value="Sing Up">
-                        <p class="singup">Already have an accont? <a href="#">Sing In.</a></p>
+                        <p class="singup">Already have an accont? <a href="#" onclick="toggleForm();">Sing In.</a></p>
                     </form>
                 </div>
                 <div class="imgBx"><img src="CSS/imgs/wallpaper004.jpg"></div>
             </div>
         </div>
     </section>
+
+    <script type="text/javascript">
+        function toggleForm(){
+            var container = document.querySelector('.container');
+            container.classList.toggle('active');
+        } 
+
+        const toggle = document.querySelector('.toggle');
+        const body = document.querySelector('body');
+
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            body.classList.toggle('dark');
+        }
+    </script>
 </body>
 </html>

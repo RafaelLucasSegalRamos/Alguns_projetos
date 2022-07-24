@@ -1,18 +1,38 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+:root
+{
+    --i: #fee648;
+    --fundoform: #fff;
+    --frases: #555;
+    --fundoazul: #677eff;
+    --fundoinput: #f5f5f5;
+    --colorwriteinput: #333;
+}
+
+.dark
+{
+    --i: #00868f;
+    --fundoform: #333;
+    --frases: #ddd;
+    --fundoazul: #90a0fd;
+    --fundoinput: #1f1f1f;
+    --colorwriteinput: rgb(68, 180, 214);
+}
 
 section
 {
     position: relative;
     min-height: 100vh;
-    background: #fee648;
+    background: var(--i);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,8 +44,9 @@ section .container
     position: relative;
     width: 800px;
     height: 500px;
-    background: white;
+    background: var(--fundoform);
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
 }
 
 section .container .user
@@ -43,7 +64,7 @@ section .container .user .imgBx
     position: relative;
     width: 50%;
     height: 100%;
-    background: #ff0;
+    background: var(--i);
     transition: 0.5s;
 }
 
@@ -62,7 +83,7 @@ section .container .user .formBx
     position: relative;
     width: 50%;
     height: 100%;
-    background: white;
+    background: var(--fundoform);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +100,7 @@ section .container .user .formBx form h2
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
-    color: #555;
+    color: var(--frases);
 }
 
 section .container .user .formBx form input
@@ -87,8 +108,8 @@ section .container .user .formBx form input
     position: relative;
     width: 100%;
     padding: 10px;
-    background: #f5f5f5;
-    color: #333;
+    background: var(--fundoinput);
+    color: var(--colorwriteinput);
     border: none;
     outline: none;
     box-shadow: none;
@@ -101,8 +122,8 @@ section .container .user .formBx form input
 section .container .user .formBx form input[type="submit"]
 {
     max-width: 100px;
-    background: #677eff;
-    color: white;
+    background: var(--fundoazul);
+    color: var(--fundoform);
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -116,7 +137,7 @@ section .container .user .formBx form .singup
     margin-top: 20px;
     font-size: 12px;
     letter-spacing: 1px;
-    color: #555;
+    color: var(--frases);
     text-transform: uppercase;
     font-weight: 300;
 }
@@ -125,21 +146,130 @@ section .container .user .formBx form .singup a
 {
     font-weight: 600;
     text-decoration: none;
-    color: #677eff;
+    color: var(--fundoazul);
 }
 
 section .container .singupBx
 {
     pointer-events: none;
-    visibility: hidden;
+    
 }
-
+/*Sing up*/
 section .container .user.singupBx .formBx
 {
-    left: 100%;
+    left: -100%;
 }
 
 section .container .user.singupBx .imgBx
 {
+    left: 100%;
+}
+
+section .container.active .singupBx
+{
+    
+    pointer-events: initial;
+}
+
+section .container.active .user.singupBx .formBx
+{
+    left: 0;
+}
+
+section .container.active .user.singupBx .imgBx
+{
+    left: 0;
+}
+
+/*Sing In*/
+
+section .container .user.singinBx .formBx
+{
+    left: 0;
+}
+
+section .container .user.singinBx .imgBx
+{
+    left: 0;
+}
+
+section .container.active .singinBx
+{
+    
+    pointer-events: none;
+}
+
+section .container.active .user.singinBx .formBx
+{
+    left: 100%;
+}
+
+section .container.active .user.singinBx .imgBx
+{
     left: -100%;
+}
+
+section .container .singinBx
+{
+    pointer-events: initial;
+}
+
+section .container .user .formBx form .toggle
+{
+    display: block;
+
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(to bottom, #111, #444);
+    position: relative;
+    margin-top: 20px;
+    left: 40%;
+    border-radius: 40px;
+}
+
+section .container .user .formBx form .toggle.active
+{
+    background: linear-gradient(to bottom, #ccc, #eee);
+}
+
+section .container .user .formBx form .toggle .indicator
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 10;
+    background: linear-gradient(to bottom, #444, #222);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+section .container .user .formBx form .toggle.toggle.active .indicator
+{
+    background: linear-gradient(to bottom, #ddd, #bbb);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
+    left: 50%;
+}
+
+@media (max-width: 991px)
+{
+    section .container
+    {
+        max-width: 400px;
+    }
+    section .container .imgBx
+    {
+        display: none;
+    }
+    section .container .user
+    {
+        width: 100%;
+    }
+    section .container .user .formBx
+    {
+        width: 100%;
+    }
 }
