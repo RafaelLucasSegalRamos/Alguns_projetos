@@ -104,6 +104,10 @@ section .container .user .formBx form input[type="submit"]
     background: #677eff;
     color: white;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
 }
 
 section .container .user .formBx form .singup
@@ -124,12 +128,18 @@ section .container .user .formBx form .singup a
     color: #677eff;
 }
 
-section .container .singupBx .formBx
+section .container .singupBx
+{
+    pointer-events: none;
+    visibility: hidden;
+}
+
+section .container .user.singupBx .formBx
 {
     left: 100%;
 }
 
-section .container .singupBx .imgBx
+section .container .user.singupBx .imgBx
 {
     left: -100%;
 }
