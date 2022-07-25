@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #040615;
+}
+
+.clock
+{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid white;
+    border-radius: 50%;
+}
+
+.clock::before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #2196f3;
+    z-index: 10000;
+    border-radius: 50%;    
+}
+
+.hour,
+.min,
+.sec
+{
+    position: absolute;
+}
+
+.hour, .hr
+{
+    width: 200px;
+    height: 200px;
+}
+
+.min, .mn
+{
+    width: 230px;
+    height: 230px;
+}
+
+.sec, .sc
+{
+    width: 250px;
+    height: 250px;
+}
+
+.hr, .mn, .sc
+{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.hr::before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: white;
+}
+.mn::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: white;
+}
+.sc::before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: #2196f3;
+}
+
+#digitalclock
+{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#hour, #minutes, #seconds
+{
+    flex-direction: column;
+    display: flex;
+    color: white;
+    font-size: 4em;
+}

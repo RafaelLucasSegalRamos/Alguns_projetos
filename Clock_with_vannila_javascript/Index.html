@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Clock whith vannila javascript</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr">
+
+            </div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn">
+                
+            </div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="digitalclock">
+        <div id="hour">
+
+        </div>
+        <div id="minutes">
+            
+        </div>
+        <div id="seconds">
+            
+        </div>
+        <div id="ampm">
+            
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const hr = document.getElementById('hr');
+        const mn = document.getElementById('mn');
+        const sc = document.getElementById('sc');
+
+        setInterval(()=>{
+            let Day = new Date();
+        let hh = Day.getHours() * 30;
+        let mm = Day.getMinutes() * 6;
+        let ss = Day.getSeconds() * 6;
+
+        hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+
+        let hour = document.getElementById('hour');
+        let minutes = document.getElementById('minutes');
+        let seconds = document.getElementById('seconds');
+        let ampm = document.getElementById('ampm');
+        })
+
+        let h = new Date().getHours();
+        let m = new Date().getMinutes();
+        let s = new Date().getSeconds();
+        let am = 'AM';
+
+        hour.innerHTML = h+':';
+        minutes.innerHTML = m+':';
+        seconds.innerHTML = s;
+
+    </script>
+</body>
+</html>
