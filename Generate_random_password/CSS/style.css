@@ -80,3 +80,41 @@ body
 {
     background: #9C27b0;
 }
+
+#copy
+{
+    position: absolute;
+    top: 140px;
+    right: 15px;
+    font-size: 2.5em;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+#copy:hover
+{
+    opacity: 1;
+}
+
+.alertBox
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #500d0d;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 4em;
+    display: none;
+}
+
+.alertBox.active
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -11,12 +11,21 @@
     <div class="inputBox">
         <h2>Random password generator app</h2>
         <input type="text" id="password" placeholder="Creat Password" readonly="">
+        <i class="fa-solid fa-paste" id="copy" onclick="copyPassword();"></i>
         <div id="btn" onclick="getPassword()">Generate Password</div>
     </div>
+    <div class="alertBox">
 
+    </div>
+<!--
+%^&*()_+><:{}[]
+-->
     <script text="text/javascript">
+        var alertBox = document.querySelector('.alertBox');
+
+
         function getPassword(){
-            var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+><:{}[]';
+            var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$';
             var passwordLengh = 16;
             var password = '';
 
@@ -24,8 +33,21 @@
                 var randomNumber = Math.floor(Math.random() * chars.length);
                 password += chars.substring(randomNumber, randomNumber+1); 
             }
-            document.getElementById('password').value = password
+            document.getElementById('password').value = password;
+            alertBox.innerHTML = "New Password copied!: <br>" + password;
+        }
+
+        function copyPassword(){
+            var copyPassText = document.getElementById('password');
+            copyPassText.select();
+            copyPassText.setSelectionRange(0,9999);
+            document.execCommand("copy");
+            alertBox.classList.toggle('active');
+            setTimeout(function(){
+                alertBox.classList.toggle('active');
+            }, 2000)
         }
     </script>
+    <script src="https://kit.fontawesome.com/e426d8b25c.js" crossorigin="anonymous"></script>
 </body>
 </html>
