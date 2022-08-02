@@ -1,0 +1,104 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container
+{
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+.container section
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start    ;
+    background-blend-mode: multiply;
+}
+
+.container section:nth-child(1)
+{
+    background: #f00 url(imgs/wallpaper002.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container section:nth-child(2)
+{
+    background: #0f0 url(imgs/wallpaper001.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container section:nth-child(3)
+{
+    background: #00f url(imgs/wallpaper004.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container section:nth-child(4)
+{
+    background: #ff0 url(imgs/wallpaper005.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-attachment: fixed;
+
+}
+
+.container section:nth-child(5)
+{
+    background: #0ff url(imgs/wallpaper006.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container section .content
+{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    max-width: 700px;
+}
+
+.container section .content h2
+{
+    background: white;
+    color: #111;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 2em;
+}
+
+.container section .content p
+{
+    background: white;
+    padding: 10px 20px;
+    font-weight: 300;
+    color: #111;
+    margin-top: 10px;
+}
