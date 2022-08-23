@@ -8,6 +8,12 @@
     <title>Email sender</title>
 </head>
 <body>
-    
+    <form action="email_sender.py">
+        <input type="text" name="pname" placeholder="Your Name...">
+        <input type="file" name="filename" id="image" style="display: none;">
+        <div class="archive"> <label for="image"> Carregar Arquivo </label> </div>
+        <textarea name="des"></textarea>
+        <input type="submit" name="sub" value="Send">
+    </form>
 </body>
 </html>
