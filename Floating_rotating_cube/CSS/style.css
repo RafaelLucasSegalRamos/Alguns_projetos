@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.cube
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube div
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+}
+
+.cube div span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#151515 , #00ec00);
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px)/*; Sendo que o  valor do translateZ é a metade do width/height máximo*/
+}
+
+.top
+{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    background: #151515;
+    transform: rotateX(90deg)
+    translateZ(150px);
+}
+
+.top::before
+{
+    content: "";
+    position: absolute;
+    background: #0f0;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    transform: translateZ(-380px);
+    filter: blur(40px);
+    box-shadow: 0 0 120px rgba(0, 255, 0, 0.2),
+    0 0 200px rgba(0, 255, 0, 0.4), 
+    0 0 300px rgba(0, 255, 0, 0.6),
+    0 0 400px rgba(0, 255, 0, 0.8),
+    0 0 500px rgba(0, 255, 0);
+}
+
+a
+{
+    position: relative;
+    left: 100px;
+}
