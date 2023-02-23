@@ -1,0 +1,37 @@
+*
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1
+{
+    text-align: center;
+    padding: 10px;
+}
+
+section
+{
+    height: 25vh;
+    background: #222;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 2s;
+}
+
+section.gradiente
+{
+    background: linear-gradient(to right, aqua, blue);
+    transition: 2s;
+
+}
+input
+{
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.5em;
+}
