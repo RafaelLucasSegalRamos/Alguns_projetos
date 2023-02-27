@@ -1,0 +1,67 @@
+:root
+{
+    --r: 255;
+    --g: 0;
+    --b: 0;
+    --text-color: rgb(var(--r), var(--g), var(--b));
+    /*Utilizando este tipo de configuração é possivel ter muito mais controle de cores já utilizadas antes, e quando for mudar as cores se torna muito mais facil, sem contar que caso necessário dentro de por exemplo uma div especifica, tambem podemos mudar uma variavel e utiliza-lá.*/
+}
+
+* 
+{
+    /*  Os comandos que possuem o -webkit- são comandos especificos para o google chrome
+        Os comandos que possuem o -moz- são comandos especificos para o mozilla firefox
+        E os comando com o -o- são comando especificos para o Opera e suas variações.
+    */
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section#s1
+{
+    background-color: #ddd;
+    /* width: 80vw;
+    height: 50vh;
+     */
+    aspect-ratio: 16/9; /*Utilizando o aspect-ratio é possivel fazer um tambem em comparação com outro, por exemplo, se é utilizado uma porcentagem na largura/altura, talvez achar o tamanho que comibina seja dificil por isso o aspet-ratio pode deixar as caixas mais bonitas por deixa-las em um tamanho simetrico, sendo que para definir o aspect-ratio é width/height. */
+    width: 80vw;
+}
+/*
+.grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;*/
+    /*Como medida de tamanha tambem podemos utilizar o fr que funciona no grid, e sua funcionalidade é que ele irá cobrir todo o espaço restanto do grid no seu lado.*/
+  /*  grid-template-rows: 1fr 1fr 1fr;
+    height: 70vh;
+    text-align: center;
+    width: clamp(200px, 50%, 600px); /*Isto é uma vesão mais simples do media screen, pois pode mudar de acordo com a tela, pois fica dividido assim: clamp (minimo, preferencial, máximo) podendo assim definir para diferentes dispositivos sem ter de escrever tudo de novo no media screen.*/
+/*}*/
+
+.drop
+{
+    animation: animate calc(var(--order) * 1s) linear forwards;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(-500px);
+    }
+    100%
+    {
+        transform: translateY(100px);
+    }
+}
