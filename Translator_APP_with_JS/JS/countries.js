@@ -1,5 +1,6 @@
-
 const countries = {
+    "en-GB": "Inglês",
+    "pt-PT": "Português",
     "am-ET": "Amharic",
     "ar-SA": "Arabic",
     "be-BY": "Bielarus",
@@ -19,7 +20,6 @@ const countries = {
     "de-DE": "German",
     "dv-MV": "Maldivian",
     "el-GR": "Greek",
-    "en-GB": "English",
     "es-ES": "Spanish",
     "et-EE": "Estonian",
     "eu-ES": "Basque",
@@ -65,7 +65,6 @@ const countries = {
     "ps-PK": "Pashto",
     "pis-SB": "Pijin",
     "pl-PL": "Polish",
-    "pt-PT": "Portuguese",
     "rn-BI": "Kirundi",
     "ro-RO": "Romanian",
     "ru-RU": "Russian",

@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="https://kit.fontawesome.com/e426d8b25c.js" 
-    crossorigin="anonymous"></script>
-    <title>Translator App</title>
+  <meta charset="utf-8">
+  <title>Language Translator | CodingNepal</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome CDN Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
-    <div class="container">
-        <div class="wrapper">
-            <div class="text-input">
-                <textarea class="from-text" spellcheck="false" placeholder="Escreva algo..."></textarea>
-
-                <textarea class="to-text" spellcheck="false" placeholder="Texto traduzido" readonly disabled></textarea>
-            </div>
-            <ul class="controls">
-                <li class="row from">
-                    <div class="icons">
-                        <i id="from" class="fa-solid fa-volume-high"></i>
-                        <i id="from" class="fa-solid fa-copy"></i>
-                    </div>
-                    <select>
-                    </select>
-                </li>
-                <li class="exchange">
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                </li>
-                <li class="row to">
-                    <select> 
-                    </select>
-                    <div class="icons">
-                        <i id="to" class="fa-solid fa-volume-high"></i>
-                        <i id="to" class="fa-solid fa-copy"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <button class="translator">Traduzir</button>
+  <div class="container">
+    <div class="wrapper">
+      <div class="text-input">
+        <textarea spellcheck="false" class="from-text" placeholder="Escreva algo..."></textarea>
+        <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Texto traduzido"></textarea>
+      </div>
+      <ul class="controls">
+        <li class="row from">
+          <div class="icons">
+            <i id="from" class="fas fa-volume-up"></i>
+            <i id="from" class="fas fa-copy"></i>
+          </div>
+          <select></select>
+        </li>
+        <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+        <li class="row to">
+          <select></select>
+          <div class="icons">
+            <i id="to" class="fas fa-volume-up"></i>
+            <i id="to" class="fas fa-copy"></i>
+          </div>
+        </li>
+      </ul>
     </div>
+    <button>Traduzir</button>
+  </div>
 
-    <script src="JS/index.js"></script>
-    <script src="JS/countries.js"></script>
+  <script src="js/countries.js"></script>
+  <script src="js/index.js"></script>
+
 </body>
+
 </html>
