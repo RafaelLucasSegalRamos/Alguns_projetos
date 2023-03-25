@@ -185,4 +185,41 @@ body
     {
         padding: 20px;
     }
+
+    .wrapper .text-input
+    {
+        flex-direction: column;
+    }
+
+    .text-input .to-text
+    {
+        border-left: 0;
+        border-top: 1px solid #aaa;
+    }
+
+    .text-input textarea
+    {
+        max-height: 200px;
+    }
+
+    .controls .row .icons
+    {
+        display: none;
+    }
+
+    .container button
+    {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .controls .row select
+    {
+        font-size: 16px;
+    }
+
+    .controls .exchange
+    {
+        font-size: 14px;
+    }
 }
