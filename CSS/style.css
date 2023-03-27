@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
 
 *
 {
@@ -13,6 +13,7 @@
 {
     --poppins_font: 'Poppins', sans-serif;
     --silkscreen_font: 'Silkscreen', cursive;
+    --oswald_font: 'Oswald', sans-serif;
 }
 
 body
@@ -20,7 +21,7 @@ body
     min-height: 100vh;
     background: #444;
     color: #ccc;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: -10;
 }
 
@@ -29,9 +30,12 @@ header
     height: 100px;
     width: 100%;
     display: flex;
+    /* flex-direction: column; */
     justify-content: end;
     align-items: center;
-    z-index: -1;
+    z-index: 10;
+    position: fixed;
+    top: 0;
 }
 
 header nav
@@ -40,10 +44,12 @@ header nav
     background: #222;
     display: flex;
     justify-content: end;
-    height: 100%;
+    height: 100px;
     border-bottom-left-radius: 100px;
     align-items: center;
     z-index: 1;
+    position: relative;
+    
 }
 
 header nav ul.sections
@@ -54,6 +60,8 @@ header nav ul.sections
     width: 85%;
     height: 100%;
     border-bottom-left-radius: 100px;
+    position: relative;
+    right: 20px;
 }
 
 header nav ul.sections li
@@ -73,6 +81,7 @@ header nav ul.sections li a
     font-size: 1.3em;
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 
 header nav ul.sections li a .textbox
@@ -120,10 +129,10 @@ header nav ul.sections li:hover:nth-child(3) a .iconbox
     position: absolute;
     width: 70px;
     height: 70px;
-    background-color: #6d6d6d;
+    background-color: #444;
     border-radius: 50%;
     transition: 0.5s;
-    right: 25.1%;
+    right: 30.1%;
     top: 7px;
     transition: 0.5s;
     z-index: 2;
@@ -132,8 +141,8 @@ header nav ul.sections li:hover:nth-child(3) a .iconbox
 .indicator::before{
     content: '';
     position: absolute;
-    top: 49%;
-    left: -18px;
+    top: 46%;
+    left: -15px;
     width: 20px;
     height: 20px;
     border-top-right-radius: 20px;
@@ -142,8 +151,8 @@ header nav ul.sections li:hover:nth-child(3) a .iconbox
 .indicator::after{
     content: '';
     position: absolute;
-    top: 49%;
-    right: -18px;
+    top: 46%;
+    right: -15px;
     width: 20px;
     height: 20px;
     border-top-left-radius: 20px;
@@ -151,20 +160,119 @@ header nav ul.sections li:hover:nth-child(3) a .iconbox
 }
 
 nav ul li:nth-child(1).active ~ .indicator{
-    right: 25.1%;
+    right: 22.2%;
 }  
 nav ul li:nth-child(2).active ~ .indicator{
-    right: 14.1%;
-}  
-nav ul li:nth-child(3).active ~ .indicator{
-    right: 3.1%;
+    right: 4%;
 }  
 
 nav .clearboard
 {
-    width: 75%;
+    width: 65%;
     background: #444;
     position: absolute;
     height: 40px;
     top: 0;
+    border-bottom-left-radius: 100px;
+}
+
+h1.title
+{
+    text-align: center;
+    font-size: 1.7em;    
+}
+main
+{
+    position: relative;
+    top: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1
+{
+    position: relative;
+    margin-top: 20px;
+    font-family: var(--oswald_font);
+    text-shadow: 0 0 20px rgba(89, 255, 219, 0.5);
+}
+
+main .projetos
+{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .projetos .projeto
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .projetos .projeto h3
+{
+    color: cornflowerblue;
+    margin: 15px 0;
+    text-decoration: underline;
+    border-left: 2px solid;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+main .projetos#simples .projeto iframe
+{
+    min-height: 300px;
+}
+
+main .projetos#simples .projeto.n2 iframe
+{
+    min-height: 80vh;
+}
+
+main .projetos#simples .projeto.n4 iframe
+{
+    min-height: 60vh;
+}
+
+main .projetos .projeto a
+{
+    text-align: center;
+    font-size: 1.25em;
+    text-decoration: underline;
+    color: rgb(29, 255, 225);
+    font-weight: 700;
+    font-family: var(--silkscreen_font);
+    padding: 10px;
+    transition: 0.5s;
+} 
+
+main .projetos .projeto a:hover
+{
+    font-size: 1.3em;
+}
+
+main .projetos .projeto a:active
+{
+    color: darkgoldenrod;
+}
+
+main .projetos#complexo .projeto iframe
+{
+    min-height: 110vh;
+}
+
+main .projetos#complexo .projeto.n2 iframe
+{
+    min-height: 80vh;
+}
+
+main .projetos#complexo .projeto.n4 iframe
+{
+    min-height: 60vh;
 }
