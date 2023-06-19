@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+    --Exo2: 'Exo 2', sans-serif;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a
+{
+    text-decoration: none;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: greenyellow;
+    text-transform: uppercase;
+    font-family: var(--Exo2);
+    letter-spacing: 0.1em;
+}
+
+a::after
+{
+    content: '\f303';
+    font-family: 'fontawesome';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+a:hover:after
+{
+    animation: draw 2s linear forwards;
+}
+
+@keyframes draw
+{
+    0%
+    {
+        top:-22px;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    13%
+    {
+        
+        transform: rotate(15deg);
+    }
+    25%
+    {
+        top: -22px;
+        left: 100%;
+        transform: rotate(-15deg);
+    }
+    38%
+    {
+        transform: rotate(15deg);
+    }
+    50%
+    {
+        top: 50%;
+        left: 100%;
+        transform: rotate(-15deg);
+    }
+    63%
+    {
+        transform: rotate(15deg);
+    }
+    75%
+    {
+       top: 50%;
+       left: 0;
+       transform: rotate(-15deg);
+    }
+    88%
+    {
+        transform: rotate(15deg);
+    }
+    90%
+    {
+        top: -24px;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        top: 55%;
+        left: 110%;
+        transform: rotate(0deg);
+    }
+}
+
+a:hover
+{
+    color: #222;
+    transition: 0.5s ease-in-out;
+    transition-delay: 2s;
+}
+
+a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: yellowgreen;
+    z-index: -1;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+    transform-origin: top left;
+}
+
+a:hover::before
+{
+    transform: scale(1);
+    transition-delay: 2s;
+}
+
+a span
+{
+    position: absolute;
+}
+
+a span:nth-child(1),
+a span:nth-child(3)
+{
+    width: 100%;
+    height: 2px;
+    background-color: yellowgreen;
+}
+
+a span:nth-child(1)
+{
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scale(0);
+}
+
+a:hover span:nth-child(1)
+{
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform: scaleX(100%);
+    transition: 0.5s ease-in-out;
+    transition-delay: 0s;
+}
+
+a span:nth-child(3)
+{
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scale(0);
+}
+
+a:hover span:nth-child(3)
+{
+    transform: scaleX(100%);
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+a span:nth-child(2),
+a span:nth-child(4)
+{
+    width: 2px;
+    height: 100%;
+    background-color: yellowgreen;
+}
+
+a span:nth-child(2)
+{
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: scale(0);
+}
+
+a:hover span:nth-child(2)
+{
+    
+    transform: scaleX(100%);
+    transition: 0.5s ease-in-out;
+    transition-delay: 1.5s;
+}
+
+a span:nth-child(4)
+{
+    top: 0;
+    right: 0;
+    transform-origin: top;
+    transform: scale(0);
+}
+
+a:hover span:nth-child(4)
+{
+    transform: scaleX(100%);
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
