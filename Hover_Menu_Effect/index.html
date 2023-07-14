@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Flying Text</title>
+</head>
+<body>
+    <ul class="list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Time</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+    <footer>
+        <p>
+            Link do Video: <a href="https://youtu.be/8saYt5fc2Pc" target="_blank">aqui</a>
+        </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/e426d8b25c.js" crossorigin="anonymous"></script>
+
+    <script>
+        let lista = document.querySelectorAll('.list li a');
+        lista.forEach(link => {
+            let texto = link.textContent.split('');
+            link.textContent = '';
+            texto.forEach((letra, i) => {
+                let span = document.createElement('span');
+                let delay =i /15 ;
+
+                let letterOut = document.createElement('span');
+                letterOut.textContent = letra;
+                letterOut.style.transitionDelay = `${delay}s`; 
+                letterOut.classList.add('out');
+                span.append(letterOut);
+                
+
+                let letterIn = document.createElement('span');
+                letterIn.textContent = letra;
+                letterIn.style.transitionDelay = `${delay}s`; 
+                letterIn.classList.add('In');
+                span.append(letterIn);
+                link.append(span);
+
+            });
+        });
+        
+    </script>
+</body>
+</html>

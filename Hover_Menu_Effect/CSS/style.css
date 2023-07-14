@@ -24,6 +24,66 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--pop);
+}
+
+.list
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.list li
+{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.list li a 
+{
+    position: relative;
+    display: flex;
+    font-size: 3em;
+    line-height: 1em;
+    text-decoration: none;
+    color: aquamarine;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+}
+
+.list li a span 
+{
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.list li a span .out
+{
+    display: inline-flex;
+    text-shadow: 0 0 5px aquamarine;
+}
+
+.list li a:hover span .out
+{
+    transform: translateY(-100%);
+}
+
+.list li a span .In
+{
+    color: blueviolet;
+    position: absolute;
+    display: inline-flex;
+    transform: translateY(100%);
+    left: 0;
+    text-shadow: 0 0 5px blueviolet;
+}
+.list li a:hover span .In
+{
+    transform: translateY(0%);
 }
 
 footer
