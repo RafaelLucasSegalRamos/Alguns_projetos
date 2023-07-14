@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    
+    <div class="inpuBox">
+        <input type="password" name="pw" id="pw" value="" required>
+        <span class="placeh">Password</span>
+        <span class="show active" onclick="showHide()" id="aberto"><i class="fa-solid fa-eye"></i></span>
+    </div>
+
+    <footer>
+        <p>
+            Link do Video: <a href="https://www.youtube.com/watch?v=lcc8G00nRdg&list=PL9Tfqauz06b0xrf4Wkt_unD0hbwmsADYy&index=9" target="_blank">aqui</a>
+        </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/e426d8b25c.js" crossorigin="anonymous"></script>
+    <script>
+        function showHide(){
+            let password = document.getElementById('pw');
+            let show = document.querySelector('.show');
+
+            if(password.type === 'password'){
+                password.setAttribute('type', 'text');
+                show.classList.add('hide');
+                show.classList.remove('active');
+            }else{
+                password.setAttribute('type', 'password');
+                show.classList.remove('hide');
+                show.classList.add('active');   
+            }
+        }
+    </script>
+</body>
+</html>
