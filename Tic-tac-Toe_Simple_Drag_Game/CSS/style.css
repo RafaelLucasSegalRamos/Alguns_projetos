@@ -194,3 +194,45 @@ body
     pointer-events: none;
     scale: 1.5;
 }
+
+footer
+{
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    width: 200px;
+    height: 75px;
+    background: linear-gradient(45deg,rgb(0, 255, 255), rgb(137, 43, 226), rgba(220, 20, 60));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 190px;
+    padding: 0 10px;
+    background: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.25em;
+    font-family: var(--8-bit);
+    transition-delay: -webkit-background-clip 0.5s, background-clip 0.5s;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p a
+{
+    text-decoration: none;
+}
+
+footer p a:visited
+{
+    color: blue;
+}
