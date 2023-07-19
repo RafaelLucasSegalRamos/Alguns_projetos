@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+    transition: 1s;
+}
+
+nav
+{
+    position: relative;
+    width: 70px;
+    height: 350px;
+    background: white;
+    border-radius: 35px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+nav ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li
+{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+nav ul li a
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    color: #222;
+    font-weight: 500;
+}
+
+nav ul li a .icon
+{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+nav ul li.active a .icon
+{
+    color: white;
+}
+
+nav ul li a .icon i
+{
+    font-size: 24px;
+    text-align: center;
+}
+
+nav ul li a .title
+{
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    left: 110px;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover a .title
+{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-25px) translateY(-50%);
+}
+
+nav ul li a .title::before
+{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    /* ou 
+    aspect-ratio: 1/1; */
+    background-color: white;
+    left: -10px;
+    top: 46%;
+    transform: rotate(45deg) translateY(-50%);
+    transition: 0.5s;
+}
+
+nav ul .indicator
+{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    aspect-ratio: 1/1;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul .indicator::before
+{
+    content: '';
+    position: absolute;
+    background-color: #222;
+    width: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+
+
+nav ul li:nth-child(1).active ~ .indicator
+{
+    transform: translateY(calc(70px * 0));
+}
+nav ul li:nth-child(2).active ~ .indicator
+{
+    transform: translateY(calc(70px * 1));
+}
+nav ul li:nth-child(3).active ~ .indicator
+{
+    transform: translateY(calc(70px * 2));
+}
+nav ul li:nth-child(4).active ~ .indicator
+{
+    transform: translateY(calc(70px * 3));
+}
+nav ul li:nth-child(5).active ~ .indicator
+{
+    transform: translateY(calc(70px * 4));
+}
+
+nav ul li:nth-child(1).active ~ .indicator::before
+{
+    background: rgb(238, 24, 95);
+}
+
+nav ul li:nth-child(2).active ~ .indicator::before
+{
+    background: rgb(54, 25, 158);
+}
+
+nav ul li:nth-child(3).active ~ .indicator::before
+{
+    background: rgb(36, 201, 138);
+}
+
+nav ul li:nth-child(4).active ~ .indicator::before
+{
+    background: rgb(66, 182, 166);
+}
+
+nav ul li:nth-child(5).active ~ .indicator::before
+{
+    background: rgb(173, 130, 9);
+}
+
+footer
+{
+    position: absolute;
+    bottom: 30px;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+}

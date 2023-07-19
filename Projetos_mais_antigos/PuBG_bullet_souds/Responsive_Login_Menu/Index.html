@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Responsive login menu</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="user singinBx">
+                <div class="imgBx"><img src="CSS/imgs/wallpaper001.jpg"></div>
+                <div class="formBx">
+                    <form>
+                        <h2>Sing In</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <input type="submit" value="Login">
+                        <p class="singup">Don't have an account? <a href="#" onclick="toggleForm();">Sing Up.</a></p>
+                        <div class="toggle">
+                            <i class="indicator"></i>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="user singupBx">
+                <div class="formBx">
+                    <form>
+                        <h2>Create An Account</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email Addres">
+                        <input type="password" placeholder="Creat Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <input type="submit" value="Sing Up">
+                        <p class="singup">Already have an accont? <a href="#" onclick="toggleForm();">Sing In.</a></p>
+                    </form>
+                </div>
+                <div class="imgBx"><img src="CSS/imgs/wallpaper004.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        function toggleForm(){
+            var container = document.querySelector('.container');
+            container.classList.toggle('active');
+        } 
+
+        const toggle = document.querySelector('.toggle');
+        const body = document.querySelector('body');
+
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
+            body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>

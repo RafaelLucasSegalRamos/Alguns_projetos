@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Split banner</title>
+</head>
+<body>
+    <section>
+        <div id="side1" class="side"></div>
+        <div id="side2" class="side"></div>
+    </section>
+
+    <div class="contentBx">
+        <h2>Split Banner On Page Scroll</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsum fugiat mollitia eveniet explicabo alias cum fuga ipsam perferendis consequatur impedit doloremque quia, accusantium amet recusandae! Quis distinctio non ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque, eaque magnam unde molestias nesciunt corporis odit rerum necessitatibus hic perspiciatis. Praesentium cupiditate minima, atque aperiam odit tenetur. Ab, quisquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus libero eligendi dicta obcaecati illo, id labore officia rem modi, expedita nihil soluta quae dolorum omnis excepturi fugit nisi quo incidunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsum fugiat mollitia eveniet explicabo alias cum fuga ipsam perferendis consequatur impedit doloremque quia, accusantium amet recusandae! Quis distinctio non ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque, eaque magnam unde molestias nesciunt corporis odit rerum necessitatibus hic perspiciatis. Praesentium cupiditate minima, atque aperiam odit tenetur. Ab, quisquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus libero eligendi dicta obcaecati illo, id labore officia rem modi, expedita nihil soluta quae dolorum omnis excepturi fugit nisi quo incidunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsum fugiat mollitia eveniet explicabo alias cum fuga ipsam perferendis consequatur impedit doloremque quia, accusantium amet recusandae! Quis distinctio non ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque, eaque magnam unde molestias nesciunt corporis odit rerum necessitatibus hic perspiciatis. Praesentium cupiditate minima, atque aperiam odit tenetur. Ab, quisquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus libero eligendi dicta obcaecati illo, id labore officia rem modi, expedita nihil soluta quae dolorum omnis excepturi fugit nisi quo incidunt. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ipsum fugiat mollitia eveniet explicabo alias cum fuga ipsam perferendis consequatur impedit doloremque quia, accusantium amet recusandae! Quis distinctio non ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed itaque, eaque magnam unde molestias nesciunt corporis odit rerum necessitatibus hic perspiciatis. Praesentium cupiditate minima, atque aperiam odit tenetur. Ab, quisquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus libero eligendi dicta obcaecati illo, id labore officia rem modi, expedita nihil soluta quae dolorum omnis excepturi fugit nisi quo incidunt.</p>
+    </div>
+
+    <script type="text/javascript">
+        var side1 = document.getElementById('side1');
+        window.addEventListener("scroll", function(){
+            side1.style.left = - window.pageYOffset + "px";
+        });
+        var side2 = document.getElementById('side2');
+        window.addEventListener("scroll", function(){
+            side2.style.left = window.pageYOffset + "px";
+        });
+    </script>
+</body>
+</html>
