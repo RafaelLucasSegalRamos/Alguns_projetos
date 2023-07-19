@@ -171,6 +171,20 @@ header nav ul li
     margin: 10px 20px;
 }
 
+header nav ul li:hover
+{
+    filter: brightness(1.5);
+    transition: 0.5s;
+}
+
+
+header.icon nav ul li:hover
+{
+    filter: contrast(5);
+    transition: 0.5s;
+}
+
+
 header nav ul li a 
 {
     color: #222;
@@ -179,6 +193,7 @@ header nav ul li a
     color: rgb(40, 161, 165);
     filter: hue-rotate(calc(45deg * (var(--i) - 1)));
     transition: 0.5s;
+    font-weight: 700;
 }
 
 header nav ul li a span
