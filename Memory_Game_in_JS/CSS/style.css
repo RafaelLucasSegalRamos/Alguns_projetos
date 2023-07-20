@@ -140,6 +140,16 @@ footer p a:visited
     background: rgba(255, 255, 255, 0.055);
     font-size: 3em;
     transition: 0.5s;
+    text-emphasis: none;
+    transform: rotateY(180deg);
+}
+
+.card.flip
+{
+    transform: rotateY(0deg);
+    background: rgba(255, 255, 255, 0.404);
+    cursor: pointer;
+    pointer-events: none;
 }
 
 .card::after
@@ -149,5 +159,47 @@ footer p a:visited
     inset: 0;
     background: rgb(0, 151, 101);
     transition: 0.5s;
-    
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.card.flip::after
+{
+    transform: rotateY(180deg);
+}
+
+.done
+{
+    transform: rotateY(0deg);
+    background: rgba(255, 255, 255, 1);
+    pointer-events: none;
+}
+
+.done::after
+{
+    transform: rotateY(180deg);
+}
+
+.game #msgfinal
+{
+    position: absolute;
+    bottom: 113px;
+    right: 100px;
+    padding: 20px;
+    background: white;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 1.35em;
+    font-family: var(--8-bit);
+    font-weight: 700;
+    letter-spacing: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#msgfinal.fim
+{
+    opacity: 1;    
 }
