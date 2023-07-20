@@ -38,7 +38,7 @@ for (var i = 0; i<emojis.length; i++)
 
                 }
             }
-        }, 1000)
+        }, 500)
     }
 }
 
