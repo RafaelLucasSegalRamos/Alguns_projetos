@@ -57,7 +57,6 @@ footer p
     border: none;
     font-size: 1.25em;
     font-family: var(--8-bit);
-    transition-delay: -webkit-background-clip 0.5s, background-clip 0.5s;
     text-align: center;
     text-decoration: none;
 }
