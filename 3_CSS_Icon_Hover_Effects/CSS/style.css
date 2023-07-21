@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+:root
+{
+    --pop: 'Poppins', sans-serif;
+    --8-bit: 'Silkscreen', sans-serif;
+    --bg: #222;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background: var(--bg);
+    min-height: 100vh;
+    background-size: contain;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--pop);
+    overflow-x: hidden;
+    flex-direction: column;
+}
+footer
+{
+    position: fixed;
+    bottom: 12%;
+    left: 10%;
+    width: 200px;
+    height: 75px;
+    background: linear-gradient(45deg,rgb(0, 255, 255), rgb(137, 43, 226), rgba(220, 20, 60));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 190px;
+    padding: 0 10px;
+    background: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.25em;
+    font-family: var(--8-bit);
+    transition-delay: -webkit-background-clip 0.5s, background-clip 0.5s;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p a
+{
+    text-decoration: none;
+}
+
+footer p a:visited
+{
+    color: blue;
+}
+
+ul
+{
+    position: relative;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+ul li 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+}
+
+ul li::before
+{
+    content: '';
+    position: absolute;
+    inset: 30px;
+    box-shadow: 0 0  0 10px var(--clz),
+    0 0 0 20px var(--bg),
+    0 0 0 22px var(--clz);
+    transition: 0.5s;
+}
+
+ul li::after
+{
+    content: '';
+    position: absolute;
+    inset: 0px;
+    background: var(--bg);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+ul li a
+{
+    position: relative;
+    text-decoration: none;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li a i
+{
+    font-size: 2em;
+    color: var(--clz);
+    transition: 0.5s;
+    position: absolute;
+}
+
+ul li:hover a i
+{
+    transform: translateY(-15%);
+}
+
+ul li a span
+{
+    position: absolute;
+    color: var(--clz);
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0) translateY(50%);
+}
+
+ul li:hover a span
+{
+    opacity: 1;
+    transform: scale(1) translateY(100%);
+}
+
+/* Efeito 01 */
+
+ul.effect1 li:hover:before
+{
+    inset: 15px;
+}
+
+/*Without this second part also looks kinda cool*/
+ul.effect1 li:hover:after
+{
+    inset: -15px;
+}
+
+ul.effect1 li:hover a i,
+ul.effect1 li:hover a span
+{
+    filter: drop-shadow(0 0 20px var(--clz)) drop-shadow(0 0 40px var(--clz)) drop-shadow(0 0 60px var(--clz));
+}
+
+/* Efeito 02 */
+
+ul.effect2 li:hover:before
+{
+    inset: 15px;
+}
+
+ul.effect2 li:hover::after
+{
+    inset: 1px;
+    transform: rotate(0deg);
+}
+
+ul.effect2 li:hover a i,
+ul.effect2 li:hover a span
+{
+    filter: drop-shadow(0 0 20px var(--clz)) drop-shadow(0 0 40px var(--clz)) drop-shadow(0 0 60px var(--clz));
+}
+
+/* Efeito 03 */
+
+ul.effect3 li:hover:before
+{
+    inset: 15px;
+}
+
+ul.effect3 li:hover::after
+{
+    inset: 1px;
+    transform: rotate(0deg);
+    background: var(--clz);
+}
+
+ul.effect3 li:hover a i,
+ul.effect3 li:hover a span
+{
+    filter: drop-shadow(0 0 40px var(--clz));
+    color: white;
+}
