@@ -24,10 +24,10 @@ buttons.forEach(function (btn) {
         lum = (r * 299 + g * 587 + b * 114) / 1000;
         console.log(lum)
 
-        if (lum > 128) {
-            btn.style.color = '#ffffff';
-        } else {
+        if (lum > 128.5) {
             btn.style.color = '#000000';
+        } else {
+            btn.style.color = '#ffffff';
         }
 
         let ripples = document.createElement('span');
