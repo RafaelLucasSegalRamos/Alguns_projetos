@@ -134,7 +134,7 @@ nav.float .menuToggle:before, .menuToggle:after
     height: 5px;
     background: var(--bgcolorido2);
     border-radius: 10px;
-    transition: 0.25s;
+    transition: 0.5s;
 
 }
 
