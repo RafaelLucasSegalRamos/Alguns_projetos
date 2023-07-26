@@ -1,0 +1,207 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+:root
+{
+    --pop: 'Poppins', sans-serif;
+    --8-bit: 'Silkscreen', sans-serif;
+    --bg: #222;
+    --bgcolorido: linear-gradient(45deg, rgb(0, 255, 255),steelblue , rgb(137, 43, 226));
+    --vermelhob: rgba(220, 20, 60);
+    --azulb: rgb(0, 255, 255);
+    --roxob: rgb(137, 43, 226);
+    --bgcolorido2: linear-gradient(45deg, var(--vermelhob), orangered, darkred);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background:var(--bg);
+    min-height: 100vh;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--pop);
+    overflow-x: hidden;
+    flex-direction: column;
+    
+}
+footer
+{
+    position: fixed;
+    bottom: 12%;
+    left: 10%;
+    width: 200px;
+    height: 75px;
+    background: repeating-conic-gradient(from var(--a), rgb(0, 255, 255) 0%, rgb(137, 43, 226) 30%, rgb(137, 43, 226) 5%, rgba(220, 20, 60) 40%, rgb(0, 255, 255) 50%);
+    /* (45deg,rgb(0, 255, 255), rgb(137, 43, 226), rgba(220, 20, 60)); */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate
+{
+    0%
+    {
+        --a:0deg;
+    }
+    100%
+    {
+        --a:360deg;
+    }
+}
+
+@property --a
+{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+footer p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    width: 190px;
+    padding: 0 10px;
+    background: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.25em;
+    font-family: var(--8-bit);
+    text-align: center;
+    text-decoration: none;
+}
+
+footer p a
+{
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+footer p a:visited
+{
+    color: var(--roxob);
+}
+
+footer p a:hover
+{
+    color: var(--vermelhob);
+}
+
+ul.menu #rad
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px white solid;
+    cursor: pointer;
+    transition: 1.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10000000;
+    background: #222;
+}
+
+ul.menu.open #rad
+{
+    transform: rotate(315deg);
+}
+
+ul.menu #rad::after
+{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 2px;
+    height: 70px;
+}
+
+ul.menu #rad::before
+{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 70px;
+    height: 2px;
+}
+
+ul.menu
+{
+    list-style: none;
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.menu li 
+{
+    color: var(--clr);
+    border: 2px solid var(--clr);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: 0.5s, transform 0.5s, text-shadow 0.5s;
+    transition-delay: 0s, calc(var(--i) * 0.1s), 0s;
+    transform-origin: 200px;
+}
+
+ul.menu.open li
+{
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(-150px)  rotate(calc(-360deg / 8 * var(--i)));    
+    /* Caso queira replicar o que acontece no site você tem que copiar quase que exato, pois só de mudar a ordem que coloca os rotate ou o translateX pode mudar o resultado que verá no site..
+     */
+}
+
+ul.menu li:hover
+{
+    box-shadow: 0 0 10px var(--clr),
+                0 0 20px var(--clr),
+                0 0 30px var(--clr),
+                0 0 40px var(--clr);
+    color: #222;
+    background: var(--clr);
+}
+
+ul.menu li a
+{
+    text-decoration: none;
+    color: var(--clr);
+    font-size: 1.75em;
+    font-family: var(--8-bit);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    transition-delay: 0;
+}
+
+ul.menu li:hover a
+{
+    color: #222;
+}
