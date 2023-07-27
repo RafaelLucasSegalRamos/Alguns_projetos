@@ -191,7 +191,7 @@ footer p a:hover
     width: 100%;
     padding: 15px;
     font-size: 1.25em;
-    color: white;
+    color: black;
     letter-spacing: 1px;
     border: none;
     outline: none;
@@ -282,7 +282,9 @@ footer p a:hover
 
 .box form .submit input[type="submit"]
 {
-    background: transparent;
+    background: var(--bgcolorido);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     outline: none;
     color: #888;
     padding: 15px 50px;
@@ -291,10 +293,12 @@ footer p a:hover
     border-radius: 5px;
     font-weight: 700;
     letter-spacing: 0.05em;
-    transition: 0.5s;
+    transition: 0.25s;
     border: none;
     position: relative;
+    box-shadow: 0 0 10px var(--bgcolorido);
 }
+
 
 .box form .submit input[type="submit"]:hover
 {
@@ -315,9 +319,16 @@ footer p a:hover
     transition: 0.5s;
     z-index: -1;
     border-radius: 10px;
+    
 }
 
 .box form .submit input[type="submit"]:hover ~ i
 {
     height: 50px;
+}
+
+.box form .submit input[type="submit"]:active ~ i,
+.box form .submit input[type="submit"]:active
+{
+    transform: scale(1.1);
 }
