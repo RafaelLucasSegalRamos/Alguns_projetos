@@ -2,10 +2,58 @@
 body.dark
 {
     background: var(--bgdcolorido) var(--roxob);
-    
+    --corpadrao: var(--azulb);
 }
 
 body.dark .float-side-bar
 {
     background: rgba(0, 0, 0, 0.3);
+}
+
+body.dark .float-side-bar .user .userName
+{
+    color: #ddd;
+}
+
+body.dark .float-side-bar.estica
+{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body.dark .float-side-bar.estica ul
+{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+body.dark .float-side-bar .user .userImage .placeholder,
+body.dark .float-side-bar #button-retreat
+{
+    color: #222;
+}
+
+body.dark .float-side-bar ul li a,
+body.dark .float-side-bar ul li div
+{
+    color: #ddd;
+}
+
+body.dark .float-side-bar ul li a:hover,
+body.dark .float-side-bar ul li div:hover
+{
+    color: #222;
+}
+
+body.dark .float-side-bar ul li div
+{
+    background: rgb(0, 0, 0, 0.6);
+}
+
+body.dark #pesquisa input
+{
+    color: #ddd;
+}
+
+body.dark #pesquisa input:hover
+{
+    color: #222;
 }

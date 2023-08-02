@@ -12,7 +12,7 @@
     --bgdcolorido: linear-gradient(45deg, rgb(23, 85, 136), rgb(25, 9, 117) , rgb(85, 11, 155));
 
     --vermelhob: rgba(220, 20, 60);
-    --azulb: rgb(0, 255, 255);
+    --azulb: rgb(58, 245, 245);
     --roxob: rgb(137, 43, 226);
     --bgaver: linear-gradient(45deg, var(--vermelhob), orangered, darkred);
     --bggray: linear-gradient(180deg, #333,#444 , #666);

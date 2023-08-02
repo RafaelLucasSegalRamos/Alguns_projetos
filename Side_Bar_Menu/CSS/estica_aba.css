@@ -1,6 +1,6 @@
 .float-side-bar.estica
 {
-    width: 200px;
+    width: 300px;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     left: 0;
@@ -8,6 +8,22 @@
     transform: translateY(0%);
     height: 100vh;
     border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.float-side-bar.estica ul.about-user
+{
+    height: 60%;
+}
+
+.float-side-bar.estica ul
+{
+    background: rgba(255, 255, 255, 0.5);
+    width: 95%;
+    border-radius: 30px;
+    padding: 0px 10px;
 }
 
 .float-side-bar.estica #button-retreat
@@ -19,3 +35,31 @@
 {
     top: 20px;
 }
+
+.float-side-bar.estica .user .userImage
+{
+    left: 10px;
+}
+
+.float-side-bar.estica .user .userName
+{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.float-side-bar.estica ul li a .textBox,
+.float-side-bar.estica ul li div .textBox
+{
+    opacity: 1;
+}
+
+.float-side-bar.estica ul li a .iconBox,
+.float-side-bar.estica ul li div .iconBox
+{
+    transform: translateX(-10px);
+}
+
+/* .float-side-bar.estica ul li #pesquisa .iconBox
+{
+    pointer-events: none;
+} */
