@@ -16,7 +16,7 @@ setInterval(function(){
     let mm = data.getMinutes();
     let ss = data.getSeconds();
 
-    hora.style.strokeDashoffset = (510 - (510*hh)/12) * (-1);
+    
     // No caso 12 é ser o formato de 12 horas para manhã(AM) e tarde(PM)
     minuto.style.strokeDashoffset = 630 - (630*mm)/60;
     segundo.style.strokeDashoffset = 760 - (760*ss)/60;
@@ -27,10 +27,11 @@ setInterval(function(){
     dot_hora.style.transform = `rotateZ(${hh*30}deg)`;
 
     ampm.innerHTML = 'AM';
-    if (h > 12) { 
+    if (hh > 12) { 
         hh = hh - 12;
         ampm.innerHTML ='PM';
     }
+    hora.style.strokeDashoffset = (510 - (510*hh)/12);
 
     hh = (hh < 10) ? '0' + hh : hh;
     mm = (mm < 10) ? '0' + mm : mm;
