@@ -34,7 +34,7 @@ footer
 {
     position: fixed;
     bottom: 12%;
-    left: 10%;
+    left: 10px;
     width: 200px;
     height: 75px;
     background: linear-gradient(45deg,rgb(0, 255, 255), rgb(137, 43, 226), rgba(220, 20, 60));
@@ -42,6 +42,7 @@ footer
     display: flex;
     justify-content: center;
     align-items: center;
+    bottom: 10px;
 }
 
 footer p

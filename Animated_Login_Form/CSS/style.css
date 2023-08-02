@@ -39,8 +39,8 @@ body
 footer
 {
     position: fixed;
-    bottom: 12%;
-    left: 10%;
+    bottom: 10%;
+    left: 50%;
     width: 200px;
     height: 75px;
     background: repeating-conic-gradient(from var(--a), rgb(0, 255, 255) 0%, rgb(137, 43, 226) 30%, rgb(137, 43, 226) 5%, rgba(220, 20, 60) 40%, rgb(0, 255, 255) 50%);
@@ -50,6 +50,7 @@ footer
     justify-content: center;
     align-items: center;
     animation: rotate 4s linear infinite;
+    transform: translateX(-50%);
 }
 
 @keyframes rotate
