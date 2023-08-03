@@ -1,4 +1,4 @@
-var lista_menu = document.querySelectorAll("ul.navigation li");
+var lista_menu = document.querySelectorAll("ul.menu li");
 
 lista_menu.forEach(function (Li) {
     Li.addEventListener("mouseenter", function () {

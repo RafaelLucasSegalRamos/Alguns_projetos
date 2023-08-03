@@ -38,6 +38,18 @@
     transform: translateX(-50%);
 }
 
+.navigation li.active::before
+{
+    width: 10px;
+    background: var(--roxob);
+    box-shadow:  0 0 5px var(--roxob),
+                 0 0 10px var(--roxob),
+                 0 0 20px var(--roxob), 
+                 0 0 30px var(--roxob),
+                 0 0 40px var(--roxob),
+                 0 0 50px var(--roxob); 
+}
+
 .navigation li a
 {
     display: flex;
