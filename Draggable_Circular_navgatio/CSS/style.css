@@ -1,0 +1,73 @@
+nav
+{
+    position: absolute;
+    top: 300px;
+    right: 0px;
+    transition: 0.5s;
+    width: 80px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+
+nav .nav-content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+}
+
+.nav-content .toggle-btn,
+.nav-content span a
+{
+    height: 60px;
+    width: 60px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.nav-content .toggle-btn
+{
+    font-size: 35px;
+    color: #0e2431;
+    transition: 0.5s;
+    z-index: 100;
+    transform: rotate(45deg);
+    cursor: grab;
+}
+
+.nav-content span 
+{
+    position: absolute;
+    transition: 0.6s ease;
+    opacity: 0;
+}
+
+.nav-content span a 
+{
+    text-decoration: none;    
+    transform: rotate(45deg);
+}
+
+
+.nav-content span a i
+{
+    font-size: 25px;
+    color: #0366a0;
+    transform: rotate(calc(var(--i) * (360deg/ -8)));
+    opacity: 0.8;
+    transition: 0.2s ease;
+
+}
+
+.nav-content span a:hover i
+{
+    opacity: 1;
+}

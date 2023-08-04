@@ -1,0 +1,12 @@
+nav.open .nav-content .toggle-btn
+{
+    transform: rotate(0deg);
+    color: #fff;
+    background: #0e2431;
+}
+
+nav.open .nav-content span
+{
+    transform: rotate(calc(var(--i) * (360deg/8))) translateY(120px);
+    opacity: 1;
+}
