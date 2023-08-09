@@ -1,7 +1,7 @@
 .inputBox
 {
     position: relative;
-    width: 350px;
+    width: 550px;
 }
 
 .inputBox input
@@ -31,4 +31,20 @@
 {
     position: relative;
     display: inline-flex;
+    flex-direction: row;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    transition: 0.25s;
+    transform: translateY(0%);
+}
+
+
+.inputBox input:focus ~  label span.letral,
+.inputBox input:valid ~  label span.letral
+{
+    transform: translateY(-100%);
+    color: #0f0;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    transition: 0.25s;
 }
