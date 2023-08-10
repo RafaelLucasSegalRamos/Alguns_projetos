@@ -12,9 +12,10 @@
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid #666;
     font-size: 1.5em;
     transition: 0.5s;
+    color: black;
 }
 .inputBox label
 {
@@ -22,7 +23,6 @@
     left: 0;
     padding: 10px 0;
     font-size: 1.5em;
-    pointer-events: none;
     color: #444;
     user-select: none;
 }
@@ -35,15 +35,14 @@
     font-size: 1.25em;
     letter-spacing: 0.05em;
     transition: 0.25s;
-    transform: translateY(0%);
 }
 
 
-.inputBox input:focus ~  label span.letral,
-.inputBox input:valid ~  label span.letral
+.inputBox > input:focus ~  span,
+.inputBox > input:valid ~  span
 {
     transform: translateY(-100%);
-    color: #0f0;
+    color: #0f0 !important;
     font-size: 1em;
     letter-spacing: 0.1em;
     transition: 0.25s;
