@@ -1,0 +1,93 @@
+main
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+}
+
+main menu
+{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+main menu span
+{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    transition: transform 0.5s, width 0.5s, height 0.5s, all 0.5s;
+    transform: translate(calc(14px*var(--x)), calc(14px*var(--y)));
+    transition-delay: calc(0.1s*var(--i)),calc(0.1s*var(--i)), calc(0.1s*var(--i));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0em;
+}
+
+main menu.open span
+{
+    width: 45px;
+    height: 45px;
+    transform: translate(calc(60px*var(--x)), calc(60px*var(--y)));
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 1.25em;
+}
+
+main menu.open span i
+{
+    transition: 0.5s;
+    color: white;
+}
+
+main menu.open span:hover i
+{
+    color: cyan;
+    filter: drop-shadow(0 0 10px cyan);
+}
+
+.close
+{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    transition: height 0.5s, width 0.5s, all 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.close i
+{
+    scale: 0;
+    transition: 0.5s;
+}
+
+main menu.open ~ .close
+{
+    width: 45px;
+    height: 45px;
+    transition-delay: 0.8s;
+    background: var(--vermelhob);
+    font-size: 1.25em;
+}
+
+main menu.open ~ .close i
+{
+    transition-delay: 1.3s;
+    scale: 1;
+}
