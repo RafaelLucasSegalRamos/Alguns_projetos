@@ -1,0 +1,24 @@
+section
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.blob
+{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+
+.blob:nth-child(2)
+{
+    filter: blur(50px);
+}
+
+body
+{
+    background: #000;
+}
