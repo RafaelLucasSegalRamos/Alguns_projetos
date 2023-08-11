@@ -1,0 +1,54 @@
+body
+{
+    background: #353535;
+}
+
+.container
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.container h2
+{
+    position: absolute;
+    font-size: 12em;
+    color: #444;
+    text-shadow: -2px 2px 0 #222, 
+                 -4px 4px 0 #222,
+                 -6px 6px 0 #222,
+                 -8px 8px 0 #222,
+                 -10px 10px 0 #222,
+                 -12px 12px 0 #222,
+                 -14px 15px 0 #222,
+                 -16px 16px 0 #222,
+                 -18px 18px 20px #000,
+                 -18px 18px 30px #000,
+                 -18px 18px 50px #000,
+                 -18px 18px 150px #000;
+}
+
+
+
+.container h2:nth-child(2)
+{
+    color: #03a9f4;
+    text-shadow: -2px 2px 0 #0375a9, 
+                 -4px 4px 0 #0375a9,
+                 -6px 6px 0 #0375a9,
+                 -8px 8px 0 #0375a9,
+                 -10px 10px 0 #0375a9,
+                 -12px 12px 0 #0375a9,
+                 -14px 15px 0 #0375a9,
+                 -16px 16px 0 #0375a9,
+                 -18px 18px 20px black,
+                 -18px 18px 30px black,
+                 -18px 18px 50px black,
+                 -18px 18px 150px black;
+    clip-path: circle(20% at 50% 100%);
+}
