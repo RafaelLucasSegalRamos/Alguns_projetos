@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+    
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <svg>
+        <filter id="wavy">
+            <feTurbulence x="0" y="0" baseFrequency="0.9" numOctaves="15" seed="2">
+                <animate attributeName="baseFrequency" dur="10s" values="0.02;0.005;0.02" repeatCount="indefinite">
+                </animate>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="30">
+        </filter>
+    </svg>
+    <!-- OBS: este projeto faz o computador travar um pouco, então pode ser que seja muito recomentadvel colocar em site, já que exige bastante do computador. -->
+    <footer>
+        <p>
+            Link do Video: <a href="https://youtu.be/avo71iW9mI4" target="_blank">aqui</a>
+        </p>
+    </footer>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+    
+</html>

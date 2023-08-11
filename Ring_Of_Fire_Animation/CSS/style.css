@@ -1,0 +1,98 @@
+:root
+{
+    --cor: rgb(221, 70, 10);
+}
+
+body
+{
+    background: var(--bg);
+    flex-direction: row;
+}
+
+.circle
+{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    filter: url(#wavy) blur(1px);
+}
+
+.circle::before
+{
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    border-radius: 50%;
+    border: 20px solid var(--cor); 
+    box-shadow: 0 0 50px var(--cor),
+                inset 0 0 50px var(--cor);   
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0002);
+    animation: animate 5s linear infinite;
+}
+
+.circle::after
+{
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    border-radius: 50%;
+    border: 20px solid #fff; 
+    box-shadow: 0 0 50px #fff,
+                inset 0 0 50px #fff;   
+    animation: animate 5s linear infinite;
+    z-index: -1;
+}
+
+.circle:nth-child(2):before
+{
+    animation-delay: 2.5s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        box-shadow: 0 0 50px var(--cor),
+        inset 0 0 50px var(--cor);   
+        /* filter: hue-rotate(0deg); */
+    }
+    20%
+    {
+        box-shadow: 0 0 60px var(--cor),
+                inset 0 0 60px var(--cor);;   
+    }
+    40%
+    {
+        box-shadow: 0 0 40px var(--cor),
+                inset 0 0 40px var(--cor);   
+    }
+    60%
+    {
+        box-shadow: 0 0 80px var(--cor),
+                inset 0 0 80px var(--cor);   
+    }
+    80%
+    {
+        box-shadow: 0 0 100px var(--cor),
+                inset 0 0 100px var(--cor);   
+    }
+    100%
+    {
+        box-shadow: 0 0 50px var(--cor),
+                inset 0 0 50px var(--cor);;   
+        /* filter: hue-rotate(360deg); */
+    }
+}
+
+svg
+{
+    width: 0;
+    height: 0;
+}
+
