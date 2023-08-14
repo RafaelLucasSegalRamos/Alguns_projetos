@@ -20,5 +20,9 @@ items.forEach(link => {
 })
 
 function addActiveClass(){
-    
+    item.forEach((i) => 
+    {
+        i.classList.remove('active')
+        this.classList.add('active')
+    })
 }
