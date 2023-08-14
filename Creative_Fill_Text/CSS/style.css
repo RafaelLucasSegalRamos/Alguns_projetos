@@ -19,6 +19,7 @@ body
     position: absolute;
     font-size: 12em;
     color: #444;
+    line-height: 1em;
     text-shadow: -2px 2px 0 #222, 
                  -4px 4px 0 #222,
                  -6px 6px 0 #222,
@@ -46,9 +47,66 @@ body
                  -12px 12px 0 #0375a9,
                  -14px 15px 0 #0375a9,
                  -16px 16px 0 #0375a9,
-                 -18px 18px 20px black,
-                 -18px 18px 30px black,
-                 -18px 18px 50px black,
-                 -18px 18px 150px black;
+                 -18px 18px 20px #003f5c,
+                 -18px 18px 30px #003f5c,
+                 -18px 18px 50px #003f5c,
+                 -18px 18px 150px #003f5c;
     clip-path: circle(20% at 50% 100%);
+    transition: clip-path 2.5s;
+}
+
+.container h2:nth-child(2):hover
+{
+    clip-path: circle(50% at 50% 100%);
+    z-index: 100;
+}
+
+.container h2:nth-child(3)
+{
+    color: #2cff37;
+    text-shadow: -2px 2px 0 #08a010, 
+                 -4px 4px 0 #08a010,
+                 -6px 6px 0 #08a010,
+                 -8px 8px 0 #08a010,
+                 -10px 10px 0 #08a010,
+                 -12px 12px 0 #08a010,
+                 -14px 15px 0 #08a010,
+                 -16px 16px 0 #08a010,
+                 -18px 18px 20px #004e04,
+                 -18px 18px 30px #004e04,
+                 -18px 18px 50px #004e04,
+                 -18px 18px 150px #004e04;
+    clip-path: circle(20% at 0% 0%);
+    transition: clip-path 2.5s;
+}
+
+.container h2:nth-child(3):hover
+{
+    clip-path: circle(120% at 0% 0%);
+    z-index: 100;
+}
+
+.container h2:nth-child(4)
+{
+    color: #e91e63;
+    text-shadow: -2px 2px 0 #ae0840, 
+                 -4px 4px 0 #ae0840,
+                 -6px 6px 0 #ae0840,
+                 -8px 8px 0 #ae0840,
+                 -10px 10px 0 #ae0840,
+                 -12px 12px 0 #ae0840,
+                 -14px 15px 0 #ae0840,
+                 -16px 16px 0 #ae0840,
+                 -18px 18px 20px #6b0024,
+                 -18px 18px 30px #6b0024,
+                 -18px 18px 50px #6b0024,
+                 -18px 18px 150px #6b0024;
+    clip-path: circle(15% at 100% 50%);
+    transition: clip-path 2.5s;
+}
+
+.container h2:nth-child(4):hover
+{
+    clip-path: circle(100% at 100% 50%);
+    z-index: 100;
 }
