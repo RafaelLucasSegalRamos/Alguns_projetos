@@ -230,8 +230,6 @@ main .projetos#complexo .projeto iframe
 main .projetos#complexo .projeto.n2 iframe
 {
     min-height: 100vh;
-    width: 850px;
-    transform: translateX(-15%);
 }
 
 main .projetos#complexo .projeto.n3 iframe
