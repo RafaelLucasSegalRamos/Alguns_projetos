@@ -22,6 +22,12 @@ nav a
     transition: 0.5s;
 }
 
+nav a.active
+{
+    color: #000;
+
+}
+
 #indicator
 {
     position: absolute;
