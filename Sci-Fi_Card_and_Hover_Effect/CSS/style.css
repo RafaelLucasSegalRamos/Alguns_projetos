@@ -1,0 +1,30 @@
+.container
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+
+.container .box
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 320px;
+    background: var(--clr);
+    box-shadow: 0 0 0 15px #0009,
+                0  25px 55px var(--clr);
+}
+
+.container .box h2
+{
+    position: relative;
+    font-size: 4em;  
+    text-align: center;  
+}
