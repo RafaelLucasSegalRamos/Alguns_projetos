@@ -1,0 +1,63 @@
+.container
+{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+.container .box
+{
+    position: relative;
+    padding: 40px 0;
+    width: 240px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .box .circle
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(var(--clr) 0 var(--i), #333 0 100%);
+    /*O zero depois das cores e antes da porcentagem que combrirá aquela cor, faz com que não haja um gradiente.*/
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box .circle::before
+{
+    content: '';
+    position: absolute;
+    inset: 10px;
+    background: #222;
+    border-radius: 50%;
+}
+
+.container .box h2
+{
+   position: relative;
+   text-align: center; 
+   color: var(--clr);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.container .box h2 small
+{
+    font-size: 0.5em;
+    font-weight: 300;
+}
+
+.container .box h3
+{
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: var(--clr);
+    letter-spacing: 0.1em;
+}
