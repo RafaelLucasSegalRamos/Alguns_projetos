@@ -1,0 +1,7 @@
+@media screen and (max-width: 640px){
+    .login-box{
+        width: 100%;
+        border-radius: 0;
+        height: 100vh;
+    }
+}
