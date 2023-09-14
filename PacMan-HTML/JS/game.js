@@ -165,8 +165,8 @@ let createNewPacMan = () => {
 
 let createGhosts = () => {
     ghosts = [];
-    for (let i = 0; i < 1 * 2; i++) {
-        let newGhost = new Ghost(
+    for (let i = 0; i < 1; i++) {
+        var newGhost = new Ghost(
             9 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
             10 * oneBlockSize + (i % 2 == 0 ? 0 : 1) * oneBlockSize,
             oneBlockSize,
@@ -183,8 +183,8 @@ let createGhosts = () => {
 };
 
 createNewPacMan()
-createGhosts()
 gameLoop()
+
 
 window.addEventListener('keydown', (e) => {
     let Key = e.keyCode
@@ -206,3 +206,4 @@ window.addEventListener('keydown', (e) => {
 
     }, 1)
 })
+createGhosts()
