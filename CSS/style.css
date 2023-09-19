@@ -200,6 +200,11 @@ main .projetos#simples .projeto.n4 iframe
     min-height: 60vh;
 }
 
+main .projetos#simples .projeto.n6 iframe
+{
+    min-height: 90vh;
+}
+
 main .projetos .projeto a
 {
     text-align: center;
