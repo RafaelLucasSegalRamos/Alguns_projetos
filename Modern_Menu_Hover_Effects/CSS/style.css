@@ -1,0 +1,78 @@
+body
+{
+    overflow: hidden;
+    cursor: none;
+}
+
+ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+}
+
+ul li a
+{
+    color: white;
+    font-size: 3em;
+    font-family: var(--8-bit);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: none;
+
+}
+
+ul:hover li a
+{
+    opacity: 0.1;
+}
+
+ul li a:hover
+{
+    opacity: 1;
+}
+
+ul li a::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0s all, opacity 0.5s;
+    font-size: 18vw;
+    z-index: -10;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--roxob);
+}
+
+ul li a:hover::before
+{
+    opacity: 1;
+}
+
+.cursor
+{
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    border: 4px solid var(--roxob);
+    pointer-events: none;
+    transition: width 0.25s, height 0.25s;
+}
+
+ul li:hover ~ .cursor
+{
+    width: 80vw;
+    height: 80vw;
+    /* border: 4px solid var(--vermelhob); */
+}
