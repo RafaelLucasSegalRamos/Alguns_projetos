@@ -1,0 +1,25 @@
+/* .pseud-body
+{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+} */
+
+main
+{
+    display: flex;
+    gap: 200px;
+}
+
+.left h3
+{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.bean-can-image
+{
+    width: 300px;
+}
