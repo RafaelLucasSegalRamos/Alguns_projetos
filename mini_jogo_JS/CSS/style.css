@@ -69,6 +69,7 @@ main
     background: var(--roxob);
     font-weight: 700;
     z-index: 1;
+    margin-top: 10px;
 }
 
 .cost-info{
@@ -106,4 +107,11 @@ main
     opacity: 1;
     display: flex;
     transform: translateX(370px);
+}
+.right h3
+{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    
 }
