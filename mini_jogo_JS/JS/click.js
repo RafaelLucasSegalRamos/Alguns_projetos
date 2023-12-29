@@ -27,7 +27,7 @@ for (let i = 0; i < buyButton.length; i++) {
             if (parseFloat(beans.innerHTML) >= parseFloat(cost.innerHTML)) {
                 beans.innerHTML = (parseFloat(beans.innerHTML) - parseFloat(cost.innerHTML)).toFixed(1);
                 cost.innerHTML = (parseFloat(cost.innerHTML) * 1.5).toFixed(1);
-                if (parseFloat(Level.innerHTML) < 15) {
+                if (parseFloat(Level.innerHTML) < 10) {
                     Level.innerHTML = (parseInt(Level.innerHTML) + 1).toFixed(0);
                     bpc = bpc + parseFloat(increase.innerHTML);	
                     increase.innerHTML = (parseFloat(increase.innerHTML) * 1.6).toFixed(1)
@@ -37,7 +37,7 @@ for (let i = 0; i < buyButton.length; i++) {
                 else {
                     bpc = parseFloat(increase.innerHTML) + bpc;
                     Level.innerHTML = (parseInt(Level.innerHTML) + 1).toFixed(0);
-                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.3).toFixed(1);
+                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.2).toFixed(1);
                     beanPerClick.innerHTML = bpc.toFixed(1);
                     cost.innerHTML = (parseFloat(cost.innerHTML) * 1.4).toFixed(1);
                 }
@@ -57,7 +57,7 @@ for (let i = 0; i < buyButton.length; i++) {
                 if (parseFloat(Level.innerHTML) < 15) {
                     Level.innerHTML = (parseInt(Level.innerHTML) + 1).toFixed(0);
                     bps = bps + parseFloat(increase.innerHTML);	
-                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.4).toFixed(1)
+                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.5).toFixed(1)
                     beanPerSecond.innerHTML = bps.toFixed(1);
                     cost.innerHTML = (parseFloat(cost.innerHTML) * 1.1).toFixed(1);
                 }
@@ -66,10 +66,12 @@ for (let i = 0; i < buyButton.length; i++) {
                     Level.innerHTML = (parseInt(Level.innerHTML) + 1).toFixed(0);
                     increase.innerHTML = (parseFloat(increase.innerHTML) * 1.3).toFixed(1);
                     beanPerSecond.innerHTML = bps.toFixed(1);
-                    cost.innerHTML = (parseFloat(cost.innerHTML) * 1.6).toFixed(1);
+                    cost.innerHTML = (parseFloat(cost.innerHTML) * 1.65).toFixed(1);
                 }
+                
             }})
-            
+           
+
             setInterval(function() {
                 beans.innerHTML = (parseFloat(beans.innerHTML) + parseFloat(bps/2)).toFixed(1);
             }, 1000);

@@ -24,6 +24,7 @@ main
     width: 300px;
     transition: 0.5s;
     cursor: pointer;
+    user-select: none;
 }
 
 #bean-can-image:hover
