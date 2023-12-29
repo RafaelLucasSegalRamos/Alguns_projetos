@@ -57,16 +57,16 @@ for (let i = 0; i < buyButton.length; i++) {
                 if (parseFloat(Level.innerHTML) < 15) {
                     Level.innerHTML = (parseInt(Level.innerHTML) + 1).toFixed(0);
                     bps = bps + parseFloat(increase.innerHTML);	
-                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.5).toFixed(1)
+                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.6).toFixed(2);
                     beanPerSecond.innerHTML = bps.toFixed(1);
-                    cost.innerHTML = (parseFloat(cost.innerHTML) * 1.1).toFixed(1);
+                    cost.innerHTML = (parseFloat(cost.innerHTML) * 1.5).toFixed(2);
                 }
                 else {
                     bps = parseFloat(increase.innerHTML) + bps;
                     Level.innerHTML = (parseInt(Level.innerHTML) + 1).toFixed(0);
-                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.3).toFixed(1);
+                    increase.innerHTML = (parseFloat(increase.innerHTML) * 1.25).toFixed(2);
                     beanPerSecond.innerHTML = bps.toFixed(1);
-                    cost.innerHTML = (parseFloat(cost.innerHTML) * 1.65).toFixed(1);
+                    cost.innerHTML = (parseFloat(cost.innerHTML) * 1.7).toFixed(1);
                 }
                 
             }})
