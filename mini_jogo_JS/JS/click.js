@@ -9,9 +9,18 @@ beanPerSecond = document.getElementById("bps");
 var bpc = parseFloat(beanPerClick.innerHTML);
 var bps = parseFloat(beanPerSecond.innerHTML);
 cont = 0
+feijoes = beans.innerHTML
 
 beancan.addEventListener("click", function() {
-    resp = (parseFloat(beans.innerHTML) + parseFloat(bpc)).toFixed(1);
+    resp = parseFloat(beans.innerHTML) + bpc;
+    
+    if (resp > 1000){
+        cont = cont + 1
+        if (cont == 1){
+            alert("Você tem mais de 1000 feijões, parabéns!")
+        }
+
+    }
     beans.innerHTML = resp;
 });
 
