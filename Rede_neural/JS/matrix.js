@@ -13,12 +13,20 @@ class Matrix{
         }
     }
 
-     static arrayToMatrix(arr) {
+    static arrayToMatrix(arr) {
         let matrix = new Matrix(arr.length, 1);
         matrix.map((elm, i, j) => {
             return arr[i];
         })
         return matrix;
+    }
+
+    static matrixToArray(matrix) {
+        let arr = [];
+        matrix.map((elm, i, j) => {
+            arr.push(elm);
+        })
+        return arr;
     }
 
     print(){
@@ -27,7 +35,7 @@ class Matrix{
 
     static map(A, func){
         let matrix = new Matrix(A.rows, A.cols);
-        matrix.data = matrix.data.map((arr, i)=> {
+        matrix.data = A.data.map((arr, i)=> {
             return arr.map((num, j) => {
                 return func(num, i, j);
             })
@@ -44,6 +52,14 @@ class Matrix{
         return this;
     }
 
+    static transpose(A){
+        let matrix = new Matrix(A.cols, A.rows);
+        matrix.map((num, i, j) => {
+            return A.data[j][i];
+        })
+        return matrix;
+    }
+
     static add(A, B){
         var matrixA = new Matrix(A.rows, A.cols);
 
@@ -54,9 +70,37 @@ class Matrix{
         return matrixA;
     }
 
+    static sub(A, B){
+        var matrixA = new Matrix(A.rows, A.cols);
+
+        matrixA.map((num, i, j) => {
+            return A.data[i][j] - B.data[i][j];
+        })
+
+        return matrixA;
+    }
+
+    static hadamard(A, B){
+        var matrixA = new Matrix(A.rows, A.cols);
+
+        matrixA.map((num, i, j) => {
+            return A.data[i][j] * B.data[i][j];
+        })
+
+        return matrixA;
+    }
+
+    static escalar_mult(A, escalar){
+        var matrixA = new Matrix(A.rows, A.cols);
+
+        matrixA.map((num, i, j) => {
+            return A.data[i][j] * escalar;
+        })
+
+        return matrixA;
+    }
+
     static multiply(A, B){
-        console.log(B);
-        
         
         var matrixA = new Matrix(A.rows, B.cols);
         
