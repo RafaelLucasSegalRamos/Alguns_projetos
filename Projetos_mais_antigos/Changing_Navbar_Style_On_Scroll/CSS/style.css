@@ -20,7 +20,7 @@
 body
 {
     background: #222;
-    min-height: 100vh;
+    min-height: 150vh;
     background-size: contain;
     display: flex;
     justify-content: center;
