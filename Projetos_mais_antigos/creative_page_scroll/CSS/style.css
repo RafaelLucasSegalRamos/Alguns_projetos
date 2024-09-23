@@ -6,6 +6,7 @@
 }
 section
 {
+    min-height: 150vh;
     padding: 50px;
     background-color: black;
 
